@@ -1,0 +1,14 @@
+
+
+<h1>Welcome to Devise! </h1>
+
+<p id="notice"><%= notice %></p>
+
+<% if user_signed_in? %>
+    
+    <p>Hello, Mr. <%= current_user.lastname %>!</p>
+    <p><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %> </p>
+    
+<% end %>
+
+<%= link_to 'Account Information', new_post_path %>
